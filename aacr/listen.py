@@ -9,21 +9,6 @@ PORT = 5000
 HOST = '127.0.0.1'
 MESSAGE_LIMIT = 30_000_000 # 10 MB 
 
-# METHODS GO BEFORE SERVER START
-
-@get("/")
-def hello():
-    return {"mesagge": "hello"}
-
-@get("/p", {"id": str})
-def hello_with_params(id: str):
-    return {"message": "hello " + id}
-
-@post("/p", {"id": str})
-def hello_with_params(id: str):
-    return {"message": "hello " + id}
-
-
 
 class Server:
     """
